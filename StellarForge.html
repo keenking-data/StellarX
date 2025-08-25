@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StellarX</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* A dark, futuristic font for the theme */
+        @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+        
+        body {
+            font-family: 'Space Mono', monospace;
+            background-color: #0d0f1c; /* Deep space blue-black */
+            color: #d1d5db; /* Light gray for readability */
+        }
+        
+        .glow-text {
+            /* Text shadow to create a subtle glow effect */
+            text-shadow: 0 0 5px #a855f7, 0 0 10px #6d28d9;
+        }
+
+        .cta-button {
+            /* Custom styles for the main call-to-action button */
+            transition: transform 0.2s, box-shadow 0.2s;
+            background-image: linear-gradient(45deg, #6b21a8, #8b5cf6);
+            border: 2px solid #a855f7;
+            box-shadow: 0 4px 15px rgba(107, 33, 168, 0.4);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(107, 33, 168, 0.6);
+        }
+
+        /* Responsive layout using flexbox and media queries */
+        .grid-container {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(1, 1fr);
+        }
+        @media (min-width: 768px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+    </style>
+</head>
+<body class="antialiased leading-relaxed text-gray-300">
+
+    <!-- Header & Navigation -->
+    <header class="p-6">
+        <nav class="container mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <!-- A simple SVG for the logo, an abstract data constellation -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8">
+                    <path d="M12 2l-2.4 4.8L4 7.2l3.2 4L4 16.8l5.6-2.4 2.4 4.8 2.4-4.8L20 16.8l-3.2-4 3.2-4-5.6 2.4z"/>
+                </svg>
+                <span class="text-2xl font-bold text-indigo-400">StellarX</span>
+            </div>
+            <!-- Nav links can be added here -->
+        </nav>
+    </header>
+
+    <main class="container mx-auto p-8">
+
+        <!-- Phase 1: Branding & Business Setup -->
+        <section id="hero" class="text-center py-20 relative overflow-hidden">
+            <!-- Hero section with main branding elements -->
+            <div class="relative z-10">
+                <h1 class="text-5xl md:text-6xl font-bold mb-4 text-white glow-text">
+                    Forging New Worlds from Data.
+                </h1>
+                <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8">
+                    Our mission is to empower humanity's search for new homes by identifying and characterizing habitable exoplanets using advanced machine learning.
+                </p>
+                <a href="#services" class="cta-button inline-block px-8 py-4 rounded-full text-white font-bold tracking-wide uppercase">
+                    Discover Our Mission
+                </a>
+            </div>
+        </section>
+
+        <!-- Phase 2: AI-Generated Design & Marketing Content -->
+        <section id="mission" class="my-16">
+            <h2 class="text-4xl text-center font-bold text-white mb-12 glow-text">The Problem & Our Solution</h2>
+            
+            <div class="grid-container max-w-5xl mx-auto items-center">
+                <!-- Problem Statement -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-400">The Problem</h3>
+                    <p class="text-lg">
+                        The universe is vast, and the data collected from telescopes is even vaster. Sifting through terabytes of light curve data to find a single, faint signature of a transiting exoplanet is a monumental task that can take years of manual analysis. Humanity's quest to find a second home is bottlenecked by the sheer volume of information.
+                    </p>
+                </div>
+                <!-- Solution Statement -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-400">Our Solution</h3>
+                    <p class="text-lg">
+                        We are **StellarX**. We built a machine learning platform that automates the analysis of astronomical data. Our models can process a year's worth of telescopic data in minutes, identifying planetary candidates with unprecedented accuracy and speed. We don't just find planets; we accelerate the future of space exploration.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="my-16">
+            <h2 class="text-4xl text-center font-bold text-white mb-12 glow-text">Services & Deliverables</h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Service Card 1 -->
+                <div class="bg-gray-900 p-6 rounded-lg border border-gray-800 hover:border-indigo-500 transition-colors">
+                    <div class="flex items-center mb-4 text-indigo-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8">
+                            <path d="M12 2l-8 4.5v9l8 4.5 8-4.5v-9zM12 2v20M4 6.5l8 4.5 8-4.5M4 15.5l8 4.5 8-4.5"/>
+                        </svg>
+                        <h3 class="text-xl font-bold ml-3">Data-as-a-Service</h3>
+                    </div>
+                    <p>
+                        Submit raw telescopic data and receive a comprehensive report of planetary candidates, complete with confidence scores and key atmospheric data points.
+                    </p>
+                </div>
+                <!-- Service Card 2 -->
+                <div class="bg-gray-900 p-6 rounded-lg border border-gray-800 hover:border-indigo-500 transition-colors">
+                    <div class="flex items-center mb-4 text-indigo-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8">
+                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+                            <path d="M14 2v6h6M18 10h-6a2 2 0 00-2 2v6a2 2 0 002 2h6a2 2 0 002-2v-6a2 2 0 00-2-2z"/>
+                        </svg>
+                        <h3 class="text-xl font-bold ml-3">Custom Model Development</h3>
+                    </div>
+                    <p>
+                        Tailored machine learning models to solve a specific scientific problem, such as analyzing spectrographic data or identifying unique stellar events.
+                    </p>
+                </div>
+                <!-- Service Card 3 -->
+                <div class="bg-gray-900 p-6 rounded-lg border border-gray-800 hover:border-indigo-500 transition-colors">
+                    <div class="flex items-center mb-4 text-indigo-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M8 12l2.5-2.5L13 12l-2.5 2.5L8 12z"/>
+                        </svg>
+                        <h3 class="text-xl font-bold ml-3">Strategic Consultation</h3>
+                    </div>
+                    <p>
+                        Collaborate with our team of data scientists and astrophysicists to develop a strategic plan for your next space exploration project.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media/Marketing Mockups -->
+        <section id="marketing" class="my-16">
+            <h2 class="text-4xl text-center font-bold text-white mb-12 glow-text">Our Latest Transmissions</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Mock Social Media Post -->
+                <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                    <div class="flex items-center mb-4">
+                        <span class="text-lg font-semibold text-indigo-300">@StellarX | LinkedIn</span>
+                    </div>
+                    <img src="https://placehold.co/800x450/1e293b/d1d5db?text=AI+Analyzing+Light+Curve" alt="AI analyzing astronomical data" class="w-full h-auto rounded-lg mb-4">
+                    <p class="mb-2">
+                        **From 2,000 light-years away, to a confirmed candidate in under 12 minutes.**
+                    </p>
+                    <p class="text-sm text-gray-400">
+                        That's the power of AI-accelerated astrophysics. Our latest model processed data from the Kepler mission, flagging 30 new potential exoplanets for further study. The next great discovery is closer than you think. #ML4SCI #DataScience #Exoplanets #NASA #FutureOfSpace
+                    </p>
+                </div>
+
+                <!-- Another Social Media Post -->
+                <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
+                    <div class="flex items-center mb-4">
+                        <span class="text-lg font-semibold text-indigo-300">@StellarX | X</span>
+                    </div>
+                    <img src="https://placehold.co/800x450/1e293b/d1d5db?text=Abstract+Neural+Network+Galaxy" alt="Neural network in space" class="w-full h-auto rounded-lg mb-4">
+                    <p class="mb-2">
+                        Are we alone? The answer might be hidden in the noise of data.
+                    </p>
+                    <p class="text-sm text-gray-400">
+                        StellarX uses advanced neural networks to filter out stellar flares and other anomalies, revealing the true signal of a world. We're not just looking for planets; we're giving humanity a new lens for the cosmos. 🔭 #TechForGood #StellarForge #AstroAI
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="p-6 text-center text-gray-500">
+        <p>&copy; 2025 StellarX. All rights reserved. </p>
+    </footer>
+
+</body>
+</html>
